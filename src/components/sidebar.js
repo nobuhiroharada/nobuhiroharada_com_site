@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
-import sidebarStyles from './sidebar.module.scss'
-
 const Sidebar = () => {
 
 	const data = useStaticQuery(graphql`
@@ -50,7 +48,7 @@ const Sidebar = () => {
 
 	let tagLinks = []
 	for(let key in orderedTag) {
-		tagLinks.push(<Link to={`/tag/${key}`} className={sidebarStyles.tag} key={key}>{key} ({tagDict[key]})</Link>)
+		tagLinks.push(<Link to={`/tag/${key}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={key}>{key} ({tagDict[key]})</Link>)
 	}
 
 	// アーカイブ
@@ -67,18 +65,18 @@ const Sidebar = () => {
 	let archiveLinks = []
 	for(let key in orderedArchive) {
 		let archiveLink = key.replace('-', '/')
-		archiveLinks.push(<Link to={`/archive/${archiveLink}`} className={sidebarStyles.tag} key={key}>{key} ({archiveDict[key]})</Link>)
+		archiveLinks.push(<Link to={`/archive/${archiveLink}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={key}>{key} ({archiveDict[key]})</Link>)
 	}
 
 
 	return (
-		<div className={sidebarStyles.contents}>
+		<div className='w-1/4 px-8 py-0 sm:w-full sm:px-0 sm:py-8'>
 			<h3>Tags</h3>
-			<div className={sidebarStyles.content}>
+			<div>
 				{tagLinks}
 			</div>
 			<h3>Archives</h3>
-			<div className={sidebarStyles.content}>
+			<div>
 				{archiveLinks}
 			</div>
 		</div>

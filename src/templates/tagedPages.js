@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Sidebar from '../components/sidebar'
-import indexStyles from '../pages/index.module.scss' // Homeと同じSCSS
 
 export const data = graphql`
 	query ( $tag: String ){
@@ -27,19 +26,19 @@ export const data = graphql`
 	}
 `
 
-const TagPage = (props) => {
+const TagedPages = (props) => {
 
 	const tag = props.pageContext.tag;
 
 	return (
 		<Layout>
-			<div className={indexStyles.content}>
+			<div className='w-3/4 sm:w-full'>
 				<h2>Posts tagged as "{tag}"</h2>
-				<ul className={indexStyles.posts}>
+				<ul className='p-0'>
 					{props.data.allMarkdownRemark.edges.map((edge, index) => {
 						return (
-							<li className={indexStyles.post} key={index}>
-								<Link to={`/blog/${edge.node.fields.slug}`}>
+							<li className='my-4' key={index}>
+								<Link to={`/blog/${edge.node.fields.slug}`} className='block p-3 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'>
 									<h2>{edge.node.frontmatter.title}</h2>
 									<p>{edge.node.frontmatter.date}</p>
 								</Link>
@@ -53,4 +52,4 @@ const TagPage = (props) => {
 	)
 }
 
-export default TagPage
+export default TagedPages

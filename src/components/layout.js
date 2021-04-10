@@ -1,17 +1,13 @@
 import React from 'react'
-
 import Header from './header'
-
 import Footer from './footer'
-
-import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
 
 	return (
-		<div className={layoutStyles.container}>
+		<div className='max-w-3xl p-4 mx-auto my-0'>
 			<Header />
-			<div className={layoutStyles.content}>
+			<div className='flex sm:inline'>
 				{props.children}
 			</div>
 			<Footer />

@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 import Sidebar from '../components/sidebar'
 import Pagination from '../components/pagination'
-import indexStyles from '../pages/index.module.scss'
 
 export const data = graphql`
 	query ($skip: Int!, $limit: Int!) {
@@ -29,7 +28,7 @@ export const data = graphql`
 	}
 `
 
-const BlogList = (props) => {
+const BlogPages = (props) => {
 
 	const numPages = props.pageContext.numPages
 	const currentPage = props.pageContext.currentPage
@@ -37,21 +36,21 @@ const BlogList = (props) => {
 	let pagination = []
 	for(let i=1; i<=numPages; i++) {
 		if(i===currentPage) {
-			pagination.push(<Link to={`/blog/${i}`} className={indexStyles.current} key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' activeClassName='bg-gray-200' key={i}>{i}</Link>)
 		} else {
-			pagination.push(<Link to={`/blog/${i}`} key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={i}>{i}</Link>)
 		}
 	}
 
 	return (
 		<Layout>
 			<Head title="Blog list" description="Blog list page"/>
-			<div className={indexStyles.content}>
-				<ul className={indexStyles.posts}>
+			<div className='w-3/4 sm:w-full'>
+				<ul className='p-0'>
 					{props.data.allMarkdownRemark.edges.map((edge, index) => {
 						return (
-							<li className={indexStyles.post} key={index}>
-								<Link to={`/blog/${edge.node.fields.slug}`}>
+							<li className='my-4' key={index}>
+								<Link to={`/blog/${edge.node.fields.slug}`} className='block p-3 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'>
 									<h2>{edge.node.frontmatter.title}</h2>
 									<p>{edge.node.frontmatter.date}</p>
 								</Link>
@@ -66,4 +65,4 @@ const BlogList = (props) => {
 	)
 }
 
-export default BlogList
+export default BlogPages

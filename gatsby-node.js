@@ -17,9 +17,9 @@ exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
 
 	const { createPage } = actions
-	const blogPostTemplate = path.resolve('./src/templates/blogPost.js')
-	const tagTemplate = path.resolve('src/templates/tag.js');
-	const archiveTemplate = path.resolve('src/templates/archive.js');
+	const blogPageTemplate = path.resolve('./src/templates/blogPage.js')
+	const tagTemplate = path.resolve('src/templates/tagedPages.js');
+	const archiveTemplate = path.resolve('src/templates/archivedPages.js');
 
 	const res = await graphql(`
 		query {
@@ -43,12 +43,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
 	const posts = res.data.allMarkdownRemark.edges
 
 	// ブログリスト ページネーション
-	const postsPerPage = 5
+	const postsPerPage = 10
 	const numPages = Math.ceil(posts.length / postsPerPage)
 	Array.from({ length: numPages }).forEach((_, i) => {
 		createPage({
 			path: i === 0 ? `/blog/1` : `/blog/${i + 1}`,
-			component: path.resolve("./src/templates/blogList.js"),
+			component: path.resolve("./src/templates/blogPages.js"),
 			context: {
 				limit: postsPerPage,
 				skip: i * postsPerPage,
@@ -91,7 +91,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 		// ブログ内容
 		createPage({
 			path: `/blog/${post.node.fields.slug}`,
-			component: blogPostTemplate,
+			component: blogPageTemplate,
 			context: {
 				slug: post.node.fields.slug
 			}
