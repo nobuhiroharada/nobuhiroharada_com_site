@@ -39,7 +39,7 @@ const TagedPages = (props) => {
 						return (
 							<li className='my-4' key={index}>
 								<Link to={`/blog/${edge.node.fields.slug}`} className='block p-3 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'>
-									<h2>{edge.node.frontmatter.title}</h2>
+									<h3>{edge.node.frontmatter.title}</h3>
 									<p>{edge.node.frontmatter.date}</p>
 								</Link>
 							</li>
