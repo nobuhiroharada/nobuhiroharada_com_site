@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import paginationStyles from './pagination.module.scss'
-
 const Pagination = (data) => {
 
 	const numPages = data.props.pageContext.numPages
@@ -11,14 +9,14 @@ const Pagination = (data) => {
 	let pagination = []
 	for(let i=1; i<=numPages; i++) {
 		if(i===currentPage) {
-			pagination.push(<Link to={`/blog/${i}`} className={paginationStyles.current} key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' activeClassName='bg-gray-200' key={i}>{i}</Link>)
 		} else {
-			pagination.push(<Link to={`/blog/${i}`} key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={i}>{i}</Link>)
 		}
 	}
 
 	return (
-		<div className={paginationStyles.pagination}>
+		<div className='my-10'>
 			{pagination}
 		</div>
 	)

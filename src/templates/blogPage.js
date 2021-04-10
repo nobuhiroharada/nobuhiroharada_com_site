@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
-import blogStyles from './blog.module.scss'
 
 export const query = graphql`
 	query ( $slug: String! ) {
@@ -18,31 +17,32 @@ export const query = graphql`
 	}
 `
 
-const Blog = (props) => {
+const BlogPage = (props) => {
 
 	const frontmatter = props.data.markdownRemark.frontmatter
 
 	return (
 		<Layout>
-			<Head title={frontmatter.title} />
-			<div className={blogStyles.content}>
-				<h1>{frontmatter.title}</h1>
-				<p className={blogStyles.date}>{frontmatter.date}</p>
-				<br />
-				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
-				<div className={blogStyles.tags}>
+			<Head title="Blog" description={frontmatter.title}/>
+			<div className='w-full'>
+				<h1 className='sm:text-xl'>{frontmatter.title}</h1>
+				<div className='my-7'>
 					{frontmatter.tags && frontmatter.tags.map(tag => (
 						<Link 
 							to={`/tag/${tag}`}
 							key={tag}
-							className={blogStyles.tag}>
+							className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'
+						>
 							{tag}
 						</Link>
 					))}
 				</div>
+				<p className='float-right mt-0 text-xs text-gray-400'>{frontmatter.date}</p>
+				<br />
+				<div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html}}></div>
 			</div>
 		</Layout>
 	)
 }
 
-export default Blog
+export default BlogPage

@@ -3,8 +3,6 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTwitterSquare, faFacebookSquare, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 
-import footerStyles from './footer.module.scss'
-
 const Footer = () => {
 	const data = useStaticQuery(graphql`
 		query {
@@ -17,31 +15,44 @@ const Footer = () => {
 	`)
 
 	return (
-		<footer className={footerStyles.footer}>
+		<footer>
 			<Link to="/">
-				<h2>nobuhiroharada.com</h2>
+				<h2 className='text-gray-800'>nobuhiroharada.com</h2>
 			</Link>
-			<div className={footerStyles.list}>
-				<ul>
+			<div>
+				<ul className='p-0'>
 					<li>
-						<Link to="/" className={footerStyles.item} activeClassName={footerStyles.activeItem}>Home</Link>
+						<Link to="/" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>Home</Link>
 					</li>
 					<li>
-						<Link to="/about" className={footerStyles.item} activeClassName={footerStyles.activeItem}>About</Link>
+						<Link to="/about" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>About</Link>
 					</li>
 					<li>
-						<Link to="/contact" className={footerStyles.item} activeClassName={footerStyles.activeItem}>Contact</Link>
+						<Link to="/contact" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>Contact</Link>
 					</li>
 				</ul>
 			</div>
-			<div className={footerStyles.socialMedia}>
-				<a href="https://twitter.com/nobuhiro_harada" className={footerStyles.twitter}>
+			<div>
+				<a 
+					href="https://twitter.com/nobuhiro_harada"
+					className='pr-4 text-4xl text-gray-400 hover:text-gray-600'
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FontAwesomeIcon icon={faTwitterSquare} />
 				</a>
-				<a href="https://www.facebook.com/nobuhiroharada1026" className={footerStyles.facebook}>
+				<a href="https://www.facebook.com/nobuhiroharada1026"
+					className='pr-4 text-4xl text-gray-400 hover:text-gray-600'
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FontAwesomeIcon icon={faFacebookSquare} />
 				</a>
-				<a href="https://github.com/nobuhiroharada" className={footerStyles.github}>
+				<a href="https://github.com/nobuhiroharada"
+					className='pr-4 text-4xl text-gray-400 hover:text-gray-600'
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<FontAwesomeIcon icon={faGithubSquare} />
 				</a>
 			</div>
