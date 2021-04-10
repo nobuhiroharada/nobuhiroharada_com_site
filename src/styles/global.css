@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: "Helvetica", sans-serif;
+  }
+
   h1,
   h2,
   p {
@@ -17,6 +21,7 @@
   a {
     @apply no-underline;
   }
+
   table {
     table-layout: fixed;
     border: 1px solid #9ca3af;
@@ -24,6 +29,7 @@
     border-spacing: 0;
     border-radius: 4px;
   }
+
   th,
   td {
     padding: 0.6rem;
