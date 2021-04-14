@@ -30,18 +30,6 @@ export const data = graphql`
 
 const BlogPages = (props) => {
 
-	const numPages = props.pageContext.numPages
-	const currentPage = props.pageContext.currentPage
-
-	let pagination = []
-	for(let i=1; i<=numPages; i++) {
-		if(i===currentPage) {
-			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' activeClassName='bg-gray-200' key={i}>{i}</Link>)
-		} else {
-			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={i}>{i}</Link>)
-		}
-	}
-
 	return (
 		<Layout>
 			<Head title="Blog list" description="Blog list page"/>
@@ -50,7 +38,7 @@ const BlogPages = (props) => {
 					{props.data.allMarkdownRemark.edges.map((edge, index) => {
 						return (
 							<li className='my-4' key={index}>
-								<Link to={`/blog/${edge.node.fields.slug}`} className='block p-3 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'>
+								<Link to={`/blog/${edge.node.fields.slug}`} className='block p-3 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400'>
 									<h3>{edge.node.frontmatter.title}</h3>
 									<p>{edge.node.frontmatter.date}</p>
 								</Link>

@@ -9,9 +9,9 @@ const Pagination = (data) => {
 	let pagination = []
 	for(let i=1; i<=numPages; i++) {
 		if(i===currentPage) {
-			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' activeClassName='bg-gray-200' key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400' activeClassName='bg-gray-200 dark:bg-gray-600' key={i}>{i}</Link>)
 		} else {
-			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={i}>{i}</Link>)
+			pagination.push(<Link to={`/blog/${i}`} className='p-2 mr-4 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400' key={i}>{i}</Link>)
 		}
 	}
 

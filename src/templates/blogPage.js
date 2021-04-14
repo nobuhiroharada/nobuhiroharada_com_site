@@ -25,7 +25,7 @@ const BlogPage = (props) => {
 		<Layout>
 			<Head title="Blog" description={frontmatter.title}/>
 			<div className='w-full'>
-				<h1 className='sm:text-xl'>{frontmatter.title}</h1>
+				<h1 className='sm:text-xl dark:text-gray-200'>{frontmatter.title}</h1>
 				<div className='my-7'>
 					{frontmatter.tags && frontmatter.tags.map(tag => (
 						<Link 

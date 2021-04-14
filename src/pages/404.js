@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 const NotFoundPage = () => {
 	return (
 		<Layout>
-			<h1>Page not found</h1>
+			<h1 className='dark:text-gray-200'>Page not found</h1>
 		</Layout>
 	)
 }
