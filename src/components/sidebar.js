@@ -48,7 +48,7 @@ const Sidebar = () => {
 
 	let tagLinks = []
 	for(let key in orderedTag) {
-		tagLinks.push(<Link to={`/tag/${key}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={key}>{key} ({tagDict[key]})</Link>)
+		tagLinks.push(<Link to={`/tag/${key}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400' key={key}>{key} ({tagDict[key]})</Link>)
 	}
 
 	// アーカイブ
@@ -65,17 +65,17 @@ const Sidebar = () => {
 	let archiveLinks = []
 	for(let key in orderedArchive) {
 		let archiveLink = key.replace('-', '/')
-		archiveLinks.push(<Link to={`/archive/${archiveLink}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200' key={key}>{key} ({archiveDict[key]})</Link>)
+		archiveLinks.push(<Link to={`/archive/${archiveLink}`} className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400' key={key}>{key} ({archiveDict[key]})</Link>)
 	}
 
 
 	return (
 		<div className='w-1/4 px-8 py-0 sm:w-full sm:px-0 sm:py-8'>
-			<h3>Tags</h3>
+			<h3 className='dark:text-gray-200'>Tags</h3>
 			<div>
 				{tagLinks}
 			</div>
-			<h3>Archives</h3>
+			<h3 className='dark:text-gray-200'>Archives</h3>
 			<div>
 				{archiveLinks}
 			</div>

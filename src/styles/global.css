@@ -42,4 +42,17 @@
   table tbody tr:last-child td {
     border-bottom: none;
   }
+
+  .dark {
+    @apply bg-gray-900;
+  }
+
+  .dark > body > div > div > div > div > div > h3,
+  .dark > body > div > div > div > div > div > p,
+  .dark > body > div > div > div > div > div > div > p,
+  .dark > body > div > div > div > div > div > div > h2,
+  .dark > body > div > div > div > div > div > div > h3,
+  .dark > body > div > div > div > div > div > table {
+    @apply text-gray-200;
+  }
 }

@@ -17,18 +17,18 @@ const Footer = () => {
 	return (
 		<footer>
 			<Link to="/">
-				<h2 className='text-gray-800'>nobuhiroharada.com</h2>
+				<h2 className='text-gray-800 dark:text-gray-200'>nobuhiroharada.com</h2>
 			</Link>
 			<div>
 				<ul className='p-0'>
 					<li>
-						<Link to="/" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>Home</Link>
+						<Link to="/" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>Home</Link>
 					</li>
 					<li>
-						<Link to="/about" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>About</Link>
+						<Link to="/about" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>About</Link>
 					</li>
 					<li>
-						<Link to="/contact" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800'>Contact</Link>
+						<Link to="/contact" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>Contact</Link>
 					</li>
 				</ul>
 			</div>
@@ -42,7 +42,7 @@ const Footer = () => {
 					<FontAwesomeIcon icon={faTwitterSquare} />
 				</a>
 				<a href="https://www.facebook.com/nobuhiroharada1026"
-					className='pr-4 text-4xl text-gray-400 hover:text-gray-600'
+					className='pr-4 text-4xl text-gray-400 hover:text-gray-600 '
 					target="_blank"
 					rel="noopener noreferrer"
 				>
@@ -57,7 +57,7 @@ const Footer = () => {
 				</a>
 			</div>
 			<div>
-				<p>Created by {data.site.siteMetadata.author} © {(new Date()).getFullYear()}</p>
+				<p className='dark:text-gray-200'>Created by {data.site.siteMetadata.author} © {(new Date()).getFullYear()}</p>
 			</div>
 		</footer>
 	)
