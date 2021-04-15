@@ -31,7 +31,7 @@ const BlogPage = (props) => {
 						<Link 
 							to={`/tag/${tag}`}
 							key={tag}
-							className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200'
+							className='inline-block p-2 m-1 text-gray-800 bg-gray-100 rounded hover:bg-gray-200 dark:bg-gray-500 dark:hover:bg-gray-400'
 						>
 							{tag}
 						</Link>

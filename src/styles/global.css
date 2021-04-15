@@ -55,4 +55,11 @@
   .dark > body > div > div > div > div > div > table {
     @apply text-gray-200;
   }
+
+  .dark > body > div > div > div > div > div > div > p > a {
+    @apply text-purple-400;
+  }
+  .dark > body > div > div > div > div > div > div > p > a:hover {
+    @apply text-purple-300;
+  }
 }

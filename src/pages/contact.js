@@ -10,7 +10,7 @@ const ContactPage = () => {
 			<div className='w-3/4 sm:w-full'>
 				<h3>お問い合わせ</h3>
 				
-				<p>Twitter: <a href="https://twitter.com/nobuhiro_harada" rel="noreferrer noopener" target="_blank">@nobuhiro_harada</a></p>
+				<p>Twitter: <a href="https://twitter.com/nobuhiro_harada" className="dark:text-purple-400 dark:hover:text-purple-300" rel="noreferrer noopener" target="_blank">@nobuhiro_harada</a></p>
 			</div>
 		</Layout>
 	)
