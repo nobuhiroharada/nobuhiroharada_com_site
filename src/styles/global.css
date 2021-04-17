@@ -52,6 +52,7 @@
   .dark > body > div > div > div > div > div > div > p,
   .dark > body > div > div > div > div > div > div > h2,
   .dark > body > div > div > div > div > div > div > h3,
+  .dark > body > div > div > div > div > div > div > blockquote > p,
   .dark > body > div > div > div > div > div > table {
     @apply text-gray-200;
   }
