@@ -22,7 +22,7 @@ const Header = () => {
 					</Link>
 				</h1>
 				<div className='self-start'>
-					<div onClick={() => setTheme(colorTheme)} role='button' tabIndex={0}>
+					<div onClick={() => setTheme(colorTheme)} role='none'>
 						{colorTheme === 'light' ?
 							<svg xmlns='http://www.w3.org/2000/svg' className='text-gray-200 cursor-pointer w-7' viewBox='0 0 20 20' fill='currentColor'>
 								<path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z' />
