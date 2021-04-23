@@ -11,16 +11,13 @@ const AboutPage = () => {
 			<div>
 				<h3>自己紹介</h3>
 				<p>はじめまして、原田順啓(はらだのぶひろ)と申します。</p>
-				<p>1982年生まれ。蠍座。</p>
+				<p>1982年生まれ</p>
 				<h3>スキル</h3>
 					<p>・言語：PHP, JavaScript, Swift</p>
 					<p>・フレームワーク：Laravel, Zend Framework</p>
 					<p>・データベース：MySQL, PostgreSQL</p>
 					<p>・OS：macOS, Linux, Windows</p>
 					<p>・その他：Git</p>
-				<h3>ポートフォリオサイト</h3>	
-					<p><a href="https://nobuhiroharada.github.io/portfolio-3/" className="dark:text-purple-400 dark:hover:text-purple-300" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ(Reactで作成)</a></p>
-					<p><a href="https://nobuhiroharada.github.io/portfolio-2/" className="dark:text-purple-400 dark:hover:text-purple-300" rel="noreferrer noopener" target="_blank">ポートフォリオサイトへ(jQueryで作成)</a></p>
 				<h3>経歴</h3>
 				<table>
 					<thead>
