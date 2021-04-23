@@ -30,7 +30,7 @@ const PortfolioPage = () => {
 					</div>
 					<div className='col-span-12'>
 						<h3 className="dark:text-gray-200">サンプルアプリランディングページ</h3>
-						<a href="https://nobuhiroharada.com" target="_blank" rel="noopener noreferrer">
+						<a href="https://nobuhiroharada.github.io/sample-app-lp/" target="_blank" rel="noopener noreferrer">
 							<img className='w-full cursor-pointer' src={sampleAppLPImage} alt='Blog' />
 						</a>
 						<p className="dark:text-gray-200">Bootstrap4を使用</p>
