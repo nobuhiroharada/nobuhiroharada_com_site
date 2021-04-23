@@ -15,7 +15,7 @@ const Footer = () => {
 	`)
 
 	return (
-		<footer>
+		<footer className="mt-20">
 			<Link to="/">
 				<h2 className='text-gray-800 dark:text-gray-200'>nobuhiroharada.com</h2>
 			</Link>
@@ -26,6 +26,9 @@ const Footer = () => {
 					</li>
 					<li>
 						<Link to="/about" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>About</Link>
+					</li>
+					<li>
+						<Link to="/portfolio" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>Portfolio</Link>
 					</li>
 					<li>
 						<Link to="/contact" className='leading-6 text-gray-400 hover:text-gray-600' activeClassName='text-gray-800 dark:text-gray-200'>Contact</Link>
