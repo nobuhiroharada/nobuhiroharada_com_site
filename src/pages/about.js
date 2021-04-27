@@ -85,6 +85,33 @@ const AboutPage = () => {
 						</tr>
 					</tbody>
 				</table>
+				<h3>資格</h3>
+				<table>
+					<thead>
+						<tr>
+							<th className='w-1/4 p-2'>年月</th>
+							<th className='w-3/4 sm:w-full' style={{borderLeft: '1px solid #9ca3af'}}>内容</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td className='w-1/4 p-2'>2008年8月</td>
+							<td className='w-3/4 sm:w-full' style={{borderLeft: '1px solid #9ca3af'}}>TOEIC 800</td>
+						</tr>
+						<tr>
+							<td className='w-1/4 p-2'>2010年8月</td>
+							<td className='w-3/4 sm:w-full' style={{borderLeft: '1px solid #9ca3af'}}>ITパスポート</td>
+						</tr>
+						<tr>
+							<td className='w-1/4 p-2'>2015年6月</td>
+							<td className='w-3/4 sm:w-full' style={{borderLeft: '1px solid #9ca3af'}}>Oracle Certified Java Programmer, Bronze SE 7</td>
+						</tr>
+						<tr>
+							<td className='w-1/4 p-2'>2021年4月</td>
+							<td className='w-3/4 sm:w-full' style={{borderLeft: '1px solid #9ca3af'}}>基本情報技術者</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<Sidebar />
 		</Layout>
