@@ -7,7 +7,6 @@ import PortfolioCard from '../components/portfolioCard'
 import blogImage from '../images/blog.png'
 import portfolioImage from '../images/portfolio.png'
 import sampleAppLPImage from '../images/sample-app-lp.png'
-import sampleGalleryImage from '../images/sample-gallery.png'
 
 const PortfolioPage = () => {
 
@@ -33,12 +32,6 @@ const PortfolioPage = () => {
 						url='https://nobuhiroharada.github.io/sample-app-lp/'
 						image={sampleAppLPImage}
 						description='Bootstrap4, GitHub Pagesを使用'
-					/>
-					<PortfolioCard
-						title='サンプルギャラリーページ'
-						url='https://nobuhiroharada.github.io/sample-gallery/'
-						image={sampleGalleryImage}
-						description='Bootstrap4, Magnific Popup, Isotope, GitHub Pagesを使用'
 					/>
 				</div>
 			</div>
