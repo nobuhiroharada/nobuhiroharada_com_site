@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitterSquare, faFacebookSquare, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+import { faFacebookSquare, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
 	const data = useStaticQuery(graphql`
@@ -33,14 +33,6 @@ const Footer = () => {
 				</ul>
 			</div>
 			<div>
-				<a 
-					href="https://twitter.com/nobuhiro_harada"
-					className='pr-4 text-4xl text-gray-400 hover:text-gray-600'
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<FontAwesomeIcon icon={faTwitterSquare} />
-				</a>
 				<a href="https://www.facebook.com/nobuhiroharada1026"
 					className='pr-4 text-4xl text-gray-400 hover:text-gray-600 '
 					target="_blank"
